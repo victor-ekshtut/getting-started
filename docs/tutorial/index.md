@@ -2,7 +2,7 @@
 next_page: app.md
 ---
 
-## The command you just ran
+## The command you just ran (UPDATED)
 
 Congratulations! You have started the container for this tutorial!
 Let's first explain the command that you just ran. In case you forgot,
