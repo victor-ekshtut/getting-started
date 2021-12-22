@@ -27,7 +27,7 @@ RUN apk add zip && \
 
 # Dev-ready container - actual files will be mounted in
 FROM base AS dev
-CMD ["mkdocs", "serve", "-a", "0.0.0.0:3000"]
+CMD ["mkdocs", "serve", "-a", "0.0.0.0:8000"]
 
 # Do the actual build of the mkdocs site
 FROM base AS build
@@ -39,5 +39,5 @@ RUN mkdocs build
 FROM nginx:alpine
 COPY --from=app-zip-creator /app.zip /usr/share/nginx/html/assets/app.zip
 COPY --from=build /app/site /usr/share/nginx/html
-EXPOSE 3000
-CMD ["npm", "run", "start"]
+EXPOSE 8000
+#CMD ["npm", "run", "start"]
