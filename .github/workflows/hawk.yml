@@ -1,4 +1,4 @@
-name: Build and Scan
+name: Hawk Scan
 on:
   push:
   pull_request:
