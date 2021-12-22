@@ -8,8 +8,8 @@ jobs:
     steps:
       - name: Check out code
         uses: actions/checkout@v2
-      - name: Install dependencies
-        run: npm clean-install
+      #- name: Install dependencies
+      #  run: npm clean-install
       - name: Run Application
         run: nohup npm run start &
       - name: Run Hawkscan
